@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
-import {GridOptions,ICellRendererParams} from "ag-grid-community";
-import { ITooltipAngularComp } from 'ag-grid-angular';
-import { ITooltipParams } from 'ag-grid-community';
+
 
 
 @Component({
@@ -11,7 +9,7 @@ import { ITooltipParams } from 'ag-grid-community';
   styleUrls: ['./bank-list.component.css']
 })
 export class BankListComponent implements OnInit {
-   gridOptions: GridOptions;
+   
   Bank:any = [];
   columnDefs = [
     {
@@ -31,13 +29,21 @@ export class BankListComponent implements OnInit {
         
     },
     {
-      headerName: "Code",
-      field: "code",
+      headerName: "IFSCCode",
+      field: "ifsccode",
       width: 150,
       sortable: true ,
       filter: true,  
      
   },
+  {
+    headerName: "MICRCode",
+    field: "micrcode",
+    width: 150,
+    sortable: true ,
+    filter: true,  
+   
+},
   {
     headerName: "Location",
     field: "location",
