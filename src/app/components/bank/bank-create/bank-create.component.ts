@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit,NgZone } from '@angular/core';
 
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators, FormControl } from "@angular/forms";
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -12,7 +12,14 @@ import { ApiService } from 'src/app/service/api.service';
 export class BankCreateComponent implements OnInit {
   
   submitted = false;
-  bankForm: FormGroup;
+  bankForm=new FormGroup({
+    name:new FormControl(),
+    branch:new FormControl(),
+    code:new FormControl(),
+    location:new FormControl()
+
+
+  })
 
   constructor(
     public fb: FormBuilder,

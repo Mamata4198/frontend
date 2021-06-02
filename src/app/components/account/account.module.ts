@@ -9,6 +9,7 @@ import { AccountComponent } from './account.component';
 import { AccountRoutingModule } from './account-route.module';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 
 
@@ -18,7 +19,8 @@ import { AgGridModule } from 'ag-grid-angular';
     AccountsListComponent,
     AccountsEditComponent,
     AccountComponent,
-    AccountsComponent
+    AccountsComponent,
+    AccountDetailsComponent
  
   ],
   imports: [

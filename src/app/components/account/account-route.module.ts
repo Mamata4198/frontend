@@ -4,6 +4,8 @@ import { AccountComponent } from './account.component';
 import { AccountsEditComponent } from './accounts-edit/accounts-edit.component';
 import { AccountsListComponent } from './accounts-list/accounts-list.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+
 
 
 
@@ -16,7 +18,9 @@ const routes: Routes = [
         {path:'create-account',component: AccountsComponent},
         { path: 'create-account', component: AccountsComponent },
         { path: 'accounts-list', component: AccountsListComponent },
-        { path: 'edit-account/:id', component: AccountsEditComponent }
+        { path: 'edit-account/:id', component: AccountsEditComponent },
+        
+          { path:'details',component:AccountDetailsComponent},
 
     ]}
 

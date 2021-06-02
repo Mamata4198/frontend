@@ -7,7 +7,7 @@
             <label for="inputName">BankName</label>
             <input class="form-control" type="text" formControlName="name">
             <!-- error -->
-            <div class="invalid-feedback" *ngIf="submitted && myForm.name.errors?.required">
+            <div class="invalid-feedback" *ngIf="submitted && bankForm.controls.name.errors?.required">
               Name is required.
             </div>
           </div>
@@ -16,7 +16,7 @@
             <label for="inputBranch">Branch</label>
             <input class="form-control" type="text" formControlName="branch">
              <!-- error -->
-             <div class="invalid-feedback" *ngIf="submitted && myForm.branch.errors?.required">
+             <div class="invalid-feedback" *ngIf="submitted && bankForm.controls.branch.errors?.required">
                 Branch is required.
               </div>
           
@@ -26,7 +26,7 @@
             <label for="inputPassword3">Code</label>
             <input class="form-control" type="text" formControlName="code">
              <!-- error -->
-             <div class="invalid-feedback" *ngIf="submitted && myForm.code.errors?.required">
+             <div class="invalid-feedback" *ngIf="submitted && bankForm.controls.code.errors?.required">
                 code is required.
               </div>
            
@@ -36,7 +36,7 @@
             <label for="inputVerify3">Location</label>
             <input class="form-control" type="text" formControlName="location">
             <!-- error -->
-            <div class="invalid-feedback" *ngIf="submitted && myForm.location.errors?.required">
+            <div class="invalid-feedback" *ngIf="submitted && bankForm.controls.location.errors?.required">
                 location is required.
               </div>
            

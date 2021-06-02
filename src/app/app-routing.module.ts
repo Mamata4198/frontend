@@ -18,7 +18,6 @@ const routes: Routes = [
  
   {path:'account',loadChildren:()=>import('./components/account/account.module').then(module=>module.AccountModule)},
 
- 
   { path:'signup',component: UserComponent,
     children:[{path:'', component:SignUpComponent}]
   },

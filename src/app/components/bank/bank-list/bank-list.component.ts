@@ -11,7 +11,7 @@ import { ITooltipParams } from 'ag-grid-community';
   styleUrls: ['./bank-list.component.css']
 })
 export class BankListComponent implements OnInit {
-  private gridOptions: GridOptions;
+   gridOptions: GridOptions;
   Bank:any = [];
   columnDefs = [
     {
@@ -20,7 +20,7 @@ export class BankListComponent implements OnInit {
         width: 150,
         sortable: true ,
         filter: true,  
-        suppressMenu: true
+        
     },
     {
         headerName: "Branch",
@@ -28,7 +28,7 @@ export class BankListComponent implements OnInit {
         width: 100,
         sortable: true ,
         filter: true,  
-        suppressMenu: true
+        
     },
     {
       headerName: "Code",
@@ -36,7 +36,7 @@ export class BankListComponent implements OnInit {
       width: 150,
       sortable: true ,
       filter: true,  
-      suppressMenu: true
+     
   },
   {
     headerName: "Location",
@@ -44,8 +44,9 @@ export class BankListComponent implements OnInit {
     width: 100,
     sortable: true ,
     filter: true,  
-    suppressMenu: true
+
 },
+
 
 
 ];

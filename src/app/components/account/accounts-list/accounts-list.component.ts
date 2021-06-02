@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GridOptions } from 'ag-grid-community';
 import { AccountapiService } from 'src/app/service/accountapi.service';
 
 
@@ -8,6 +9,7 @@ import { AccountapiService } from 'src/app/service/accountapi.service';
   styleUrls: ['./accounts-list.component.css']
 })
 export class AccountsListComponent implements OnInit {
+  gridOptions: GridOptions;
   Account:any = [];
 
   columnDefs = [
