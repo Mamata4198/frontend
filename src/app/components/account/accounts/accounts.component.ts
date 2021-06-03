@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { GridOptions } from 'ag-grid';
 
 import { Router } from '@angular/router';
 
@@ -17,6 +17,7 @@ import { AccountapiService} from 'src/app/service/accountapi.service';
 })
 export class AccountsComponent implements OnInit {
   submitted = false;
+  gridOptions:GridOptions;
   Bank:any = [];
   selectedBankId;
   

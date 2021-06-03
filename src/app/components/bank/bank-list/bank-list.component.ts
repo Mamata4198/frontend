@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
-
+import { GridOptions } from "ag-grid-community";
 
 
 @Component({
@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/service/api.service';
   styleUrls: ['./bank-list.component.css']
 })
 export class BankListComponent implements OnInit {
-   
+   gridOptions: GridOptions;
   Bank:any = [];
   columnDefs = [
     {
