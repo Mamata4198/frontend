@@ -1,33 +1,47 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material';
-import  {MatCardModule } from '@angular/material';
-import  {MatIconModule} from '@angular/material';
-import  {MatTabsModule } from '@angular/material';
-import  {MatCheckboxModule} from '@angular/material';
+import { CommonModule } from '@angular/common';
+
+import { MatButtonModule } from '@angular/material/button/';
+import  {MatCardModule } from '@angular/material/card';
+import  {MatIconModule} from '@angular/material/icon';
+import  {MatTabsModule } from '@angular/material/tabs';
+import  {MatCheckboxModule} from '@angular/material/checkbox';
 import  {MatFormFieldModule} from '@angular/material/form-field';
-import  {MatInputModule} from '@angular/material';
-import { MatSelectModule } from '@angular/material';
-
-import {} from '@angular/material';
-const MaterialComponents =[
-  MatButtonModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatSelectModule ,
-  MatTabsModule ,
-  MatIconModule,
-  MatFormFieldModule,
-  MatInputModule,
-  
-];
-
-
-
+import  {MatInputModule} from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
-  
-  imports:[MaterialComponents],
-  exports:[MaterialComponents]
-  
+  declarations: [],
+  imports: [
+    CommonModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatMenuModule
+  ],
+
+  exports:[
+    MatFormFieldModule,
+    MatCardModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatMenuModule
+  ]
 })
 export class MaterialModule { }

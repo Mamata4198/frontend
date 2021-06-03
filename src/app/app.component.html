@@ -1,4 +1,79 @@
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-black border-bottom shadow-sm">
+<mat-sidenav-container fullscreen>
+  <mat-sidenav  #sidenav  mode="side" position="start" opened>
+    Menu
+    <div>
+    <a class="my-0 mr-md-auto font-weight-normal" routerLink="bank">Banking</a>
+    </div>
+    <div>
+    <a  class="my-0 mr-md-auto font-weight-normal" routerLink="account">Accounts</a>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      My Application
+      <span class="toolbar-spacer" style="padding-left: 75%;">
+        <a  type="button" class="btn btn-dark btn-sm" routerLink="signup">SignUp</a>
+      </span>
+    </mat-toolbar>
+    
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-black border-bottom shadow-sm">
  <nav>
   <a  type="button" class="btn btn-dark btn-sm" routerLink="bank">Bank</a>
 </nav>
@@ -9,9 +84,4 @@
 
 </nav>
 
-</div>
-
-
-
-
-<router-outlet></router-outlet>
+</div> -->
