@@ -1,6 +1,7 @@
 export class Bank {
     name: string;
     branch: string;
-    code: string;
+    ifsccode: string;
+    micrcode: string;
     location: string;
 }

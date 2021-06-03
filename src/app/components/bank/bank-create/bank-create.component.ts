@@ -15,7 +15,8 @@ export class BankCreateComponent implements OnInit {
   bankForm=new FormGroup({
     name:new FormControl(),
     branch:new FormControl(),
-    code:new FormControl(),
+    ifsccode:new FormControl(),
+    micrcode:new FormControl(),
     location:new FormControl()
 
 
@@ -32,9 +33,10 @@ export class BankCreateComponent implements OnInit {
   }
   mainForm() {
     this.bankForm = this.fb.group({
-      name: ['', [Validators.required]],
+      name: ['', [Validators.required,Validators.minLength(3)]],
       branch: ['', [Validators.required]],
-      code: ['', [Validators.required]],
+      ifsccode: ['', [Validators.required,Validators.minLength(11),Validators.pattern('^[A-Z]{4}0[A-Z0-9]{6}$')]],
+      micrcode: ['', [Validators.required,Validators.minLength(9)]],
       location: ['', [Validators.required]]
     })
   }

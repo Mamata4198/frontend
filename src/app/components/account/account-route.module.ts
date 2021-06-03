@@ -16,7 +16,7 @@ const routes: Routes = [
         {path:'',component:AccountComponent,children:[
         { path: '', pathMatch: 'full', redirectTo: 'create-account' },
         {path:'create-account',component: AccountsComponent},
-        { path: 'create-account', component: AccountsComponent },
+        // { path: 'create-account', component: AccountsComponent },
         { path: 'accounts-list', component: AccountsListComponent },
         { path: 'edit-account/:id', component: AccountsEditComponent },
         

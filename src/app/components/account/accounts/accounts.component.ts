@@ -24,7 +24,7 @@ export class AccountsComponent implements OnInit {
   accountForm=new FormGroup({
     name: new FormControl(),
     bank: new FormControl(),
-    bankId:new FormControl(),
+   
     AccountType: new FormControl(),
     AccountNo: new FormControl()})
 
@@ -49,10 +49,10 @@ export class AccountsComponent implements OnInit {
 
 mainForm() {
   this.accountForm = this.fb.group({
-    name: [''],
+    name: ['',[Validators.required,Validators.minLength(3)]],
     bank: [''],
-    bankId: [''],
-    AccountType: [''],
+ 
+    AccountType: ['',[Validators.required]],
     AccountNo: ['']
   })
 }

@@ -12,15 +12,15 @@ export class AccountDetailsComponent implements OnInit {
     {
         headerName: "slNo",
         field: "slNo",
-        width: 100,
+        width: 50,
         sortable: true ,
         filter: true,  
         
     },
     {
-        headerName: "Amount",
-        field: "Amount",
-        width: 100,
+        headerName: "transactionNo",
+        field: "transactionNo",
+        width: 150,
         sortable: true ,
         filter: true,  
         
@@ -44,6 +44,14 @@ export class AccountDetailsComponent implements OnInit {
 {
   headerName: "debit",
   field: "debit",
+  width: 100,
+  sortable: true ,
+  filter: true,  
+
+},
+{
+  headerName: "total",
+  field: " ",
   width: 100,
   sortable: true ,
   filter: true,  
