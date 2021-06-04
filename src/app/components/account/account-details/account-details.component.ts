@@ -12,7 +12,7 @@ export class AccountDetailsComponent implements OnInit {
     {
         headerName: "slNo",
         field: "slNo",
-        width: 50,
+        width: 70,
         sortable: true ,
         filter: true,  
         
