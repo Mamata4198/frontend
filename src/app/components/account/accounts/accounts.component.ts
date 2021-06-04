@@ -46,8 +46,6 @@ export class AccountsComponent implements OnInit {
      })    
 
 }
-
-
 mainForm() {
   this.accountForm = this.fb.group({
     name: ['',[Validators.required,Validators.minLength(3)]],
