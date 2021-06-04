@@ -23,7 +23,7 @@ import { RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { AgGridModule } from 'ag-grid-angular';
-import { HomeComponent } from './components/home/home.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 
@@ -35,7 +35,8 @@ import { HomeComponent } from './components/home/home.component';
     UserComponent,
     SignInComponent,
     SignUpComponent,
-    HomeComponent
+    UserProfileComponent,
+    
     
  
   ],

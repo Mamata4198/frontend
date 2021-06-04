@@ -5,10 +5,7 @@ import { UserComponent } from './user/user.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 
-import { HomeComponent } from './components/home/home.component';
-
-
-
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -23,13 +20,13 @@ const routes: Routes = [
   },
   { path:'login',component: UserComponent,
   children:[{path:'', component:SignInComponent}]
-},
-
-{ path: 'home', component: HomeComponent },
-{path:'**',pathMatch:'full', redirectTo:'home'}
-
-
+  },
+  {
+    path: 'userprofile' , component: UserProfileComponent,
+    
+  },
   
+
 ];
 
 @NgModule({

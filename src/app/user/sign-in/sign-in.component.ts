@@ -11,7 +11,7 @@ import { UserService } from '../../shared/user.service';
 })
 export class SignInComponent implements OnInit {
 
-  constructor(private userService: UserService,private router : Router) { }
+  constructor(public userService: UserService, public router : Router) { }
   model ={
     email :'',
     password:''
@@ -21,13 +21,13 @@ export class SignInComponent implements OnInit {
 
   ngOnInit() {
     if(this.userService.isLoggedIn())
-    this.router.navigateByUrl('');
+    this.router.navigateByUrl('/userprofile');
   }
   onSubmit(form : NgForm){
     this.userService.login(form.value).subscribe(
       res => {
         this.userService.setToken(res['token']);
-        this.router.navigateByUrl('');
+        this.router.navigateByUrl('/userprofile');
       },
       err => {
         this.serverErrorMessages = err.error.message;
