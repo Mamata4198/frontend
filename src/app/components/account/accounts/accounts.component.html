@@ -6,8 +6,9 @@
         <div class="form-group">
           <label for="inputName">CustomerName</label>
           <input class="form-control" type="text" formControlName="name">
+         
           <!-- error -->
-          <div *ngIf="accountForm.controls.name.invalid && (accountForm.controls.name.dirty || accountForm.controls.name.touched)" class="alert alert-danger">
+          <div *ngIf="accountForm.controls.name.invalid && (accountForm.controls.name.dirty || accountForm.controls.name.touched)">
             <div *ngIf="accountForm.controls.name.errors.required">
               Name is required.
            </div>
@@ -15,6 +16,7 @@
             Name must be at least 3 characters long.
          </div>
           </div>
+         
         </div>
 
         <div class="form-group">
@@ -36,27 +38,14 @@
         <div class="form-group">
           <label for="AccountType">AccountType</label>
           <input class="form-control" type="text" formControlName="AccountType">
-          <div *ngIf="accountForm.controls.AccountType.invalid && (accountForm.controls.AccountType.dirty || accountForm.controls.AccountType.touched)" class="alert alert-danger">
-            <div *ngIf="accountForm.controls.AccountType.errors.required">
-              AccountType is required.
-           </div>
-           </div>
+         
           
         </div>
 
         <div class="form-group">
           <label for="AccountNo">AccountNo</label>
           <input class="form-control" type="text" formControlName="AccountNo">
-          <div *ngIf="accountForm.controls.AccountNo.invalid && (accountForm.controls.AccountNo.dirty || accountForm.controls.AccountNo.touched)" class="alert alert-danger">
-            <div *ngIf="accountForm.controls.AccountNo.errors.required">
-              AccountNo is required.
-           </div>
-           </div>
-          <!-- error
-          <div class="invalid-feedback" *ngIf="submitted && myForm.AccountNo.errors?.required">
-              AccountNo is required.
-            </div>
-          -->
+          
         </div><br/>
 
         <div class="form-group">

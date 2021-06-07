@@ -11,10 +11,17 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   
+<<<<<<< HEAD
    //{path:'bank',loadChildren:()=>import('./components/bank/bank.module').then(module=>module.BankModule) },
 
  
    //{path:'account',loadChildren:()=>import('./components/account/account.module').then(module=>module.AccountModule)},
+=======
+  // {path:'bank',loadChildren:()=>import('./components/bank/bank.module').then(module=>module.BankModule) },
+
+ 
+  // {path:'account',loadChildren:()=>import('./components/account/account.module').then(module=>module.AccountModule)},
+>>>>>>> 844e6b353891db2a0e71eedcf298bfc13f82f24c
 
   { path:'signup',component: UserComponent,
     children:[{path:'', component:SignUpComponent}]
@@ -25,9 +32,15 @@ const routes: Routes = [
   
   {
     path: 'userprofile' , component: UserProfileComponent,
+<<<<<<< HEAD
     children:[
       {path:'bank',loadChildren:()=>import('./components/bank/bank.module').then(module=>module.BankModule)},
       {path:'account',loadChildren:()=>import('./components/account/account.module').then(module=>module.AccountModule)}]
+=======
+    children:[{path:'bank',loadChildren:()=>import('./components/bank/bank.module').then(module=>module.BankModule)},
+    {path:'account',loadChildren:()=>import('./components/account/account.module').then(module=>module.AccountModule)}]
+    
+>>>>>>> 844e6b353891db2a0e71eedcf298bfc13f82f24c
   },
   {
     path: '', redirectTo: '/login', pathMatch: 'full'
