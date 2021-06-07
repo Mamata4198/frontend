@@ -7,11 +7,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 mat-sidenav {
-    width: 180px;
+    width: 200px;
     padding:15px;
 }
 .mat-drawer { 
-    background-color: #023075;
+    background-color: white;
     color:#fff
 }
 .main-content {
