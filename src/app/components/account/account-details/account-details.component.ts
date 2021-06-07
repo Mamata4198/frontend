@@ -10,7 +10,7 @@ import { GridOptions } from 'ag-grid-community';
 export class AccountDetailsComponent implements OnInit {
   [x: string]: any;
   gridOptions: GridOptions;
-  balance = 30000;
+  balance = 50000;
   prevBal = this.balance;
 
   columnDefs = [

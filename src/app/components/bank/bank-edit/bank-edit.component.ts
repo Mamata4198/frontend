@@ -30,10 +30,12 @@ export class BankEditComponent implements OnInit {
     let id = this.actRoute.snapshot.paramMap.get('id');
     this.getBank(id);
     this.editForm = this.fb.group({
-      name: ['', [Validators.required]],
+      name: ['', [Validators.required,Validators.minLength(3)]],
       branch: ['', [Validators.required]],
-      code: ['', [Validators.required]],
+      ifsccode: ['', [Validators.required,Validators.minLength(11),Validators.pattern('^[A-Z]{4}0[A-Z0-9]{6}$')]],
+      micrcode: ['', [Validators.required,Validators.minLength(9)]],
       location: ['', [Validators.required]]
+    
     })
   }
   get myForm(){
@@ -44,18 +46,21 @@ export class BankEditComponent implements OnInit {
       this.editForm.setValue({
         name: data['name'],
         branch: data['branch'],
-        code: data['code'],
-        location: data['location'],
+        ifsccode: data['ifsccode'],
+        micrcode:data['micrcode'],
+        location: data['location']
       });
     });
   }
 
   updateBank() {
     this.editForm = this.fb.group({
-      name: ['', [Validators.required]],
+      name: ['', [Validators.required,Validators.minLength(3)]],
       branch: ['', [Validators.required]],
-      code: ['', [Validators.required]],
+      ifsccode: ['', [Validators.required,Validators.minLength(11),Validators.pattern('^[A-Z]{4}0[A-Z0-9]{6}$')]],
+      micrcode: ['', [Validators.required,Validators.minLength(9)]],
       location: ['', [Validators.required]]
+    
      
     })
   }
@@ -68,7 +73,7 @@ export class BankEditComponent implements OnInit {
         let id = this.actRoute.snapshot.paramMap.get('id');
         this.apiService.updateBank(id, this.editForm.value)
           .subscribe(res => {
-            this.router.navigateByUrl('/bank/banks-list');
+            this.router.navigateByUrl('/banks-list');
             console.log('Content updated successfully!')
           }, (error) => {
             console.log(error)

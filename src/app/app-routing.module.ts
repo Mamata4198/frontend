@@ -10,7 +10,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   
-  // {path:'bank',loadChildren:()=>import('./components/bank/bank.module').then(module=>module.BankModule) },
+   //{path:'bank',loadChildren:()=>import('./components/bank/bank.module').then(module=>module.BankModule) },
 
  
   // {path:'account',loadChildren:()=>import('./components/account/account.module').then(module=>module.AccountModule)},
@@ -23,8 +23,8 @@ const routes: Routes = [
   },
   {
     path: 'userprofile' , component: UserProfileComponent,
-    children:[{path:'bank',loadChildren:()=>import('./components/bank/bank.module').then(module=>module.BankModule)},
-    {path:'account',loadChildren:()=>import('./components/account/account.module').then(module=>module.AccountModule)}]
+     children:[{path:'bank',loadChildren:()=>import('./components/bank/bank.module').then(module=>module.BankModule)},
+     {path:'account',loadChildren:()=>import('./components/account/account.module').then(module=>module.AccountModule)}]
     
   },
   {
